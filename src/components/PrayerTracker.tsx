@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { PrayIcon } from 'lucide-react';
+import { HeartIcon } from 'lucide-react';
 import { useDashboardStore } from '@/lib/store';
 
 export function PrayerTracker() {
@@ -10,7 +10,7 @@ export function PrayerTracker() {
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <PrayIcon className="h-5 w-5" />
+          <HeartIcon className="h-5 w-5" />
           Prayer Tracker
         </CardTitle>
       </CardHeader>
