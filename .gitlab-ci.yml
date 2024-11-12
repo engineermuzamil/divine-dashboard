@@ -1,33 +1,33 @@
-image: node:20-alpine
+# image: node:20-alpine
 
-stages:
-  - test
-  - build
-  - deploy
+# stages:
+#   - test
+#   - build
+#   - deploy
 
-cache:
-  paths:
-    - node_modules/
+# cache:
+#   paths:
+#     - node_modules/
 
-test:
-  stage: test
-  script:
-    - npm install
-    - npm run lint
+# test:
+#   stage: test
+#   script:
+#     - npm install
+#     - npm run lint
 
-build:
-  stage: build
-  script:
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - dist/
+# build:
+#   stage: build
+#   script:
+#     - npm install
+#     - npm run build
+#   artifacts:
+#     paths:
+#       - dist/
 
-deploy:
-  stage: deploy
-  script:
-    - npm install --global vercel
-    - vercel --token $VERCEL_TOKEN --prod
-  only:
-    - main
+# deploy:
+#   stage: deploy
+#   script:
+#     - npm install --global vercel
+#     - vercel --token $VERCEL_TOKEN --prod
+#   only:
+#     - main
